@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop All Products | Floral Craft</title>
+  <meta name="description" content="Browse all Floral Craft handmade products: mufflers, tupis, dresses, sota flowers and gift combos. Filter by category and search by name.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shop | Floral Craft">
+  <meta property="og:description" content="Handmade mufflers, tupis, dresses and sota flowers.">
+  <meta property="og:image" content="images/hero.svg">
+  <meta name="theme-color" content="#C97B5E">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container page-hero">
+      <span class="eyebrow">Our collection</span>
+      <h1 class="bn">সব পণ্য · Shop All Products</h1>
+      <p>Pick a category, search by name, or sort by price.</p>
+    </div>
+
+    <div class="container" style="padding-bottom:40px">
+      <div class="toolbar">
+        <div class="tabs" id="cat-tabs" role="tablist" aria-label="Product categories"></div>
+        <div class="tools-row">
+          <input type="search" id="shop-search" placeholder="🔍 Search products · পণ্য খুঁজুন" aria-label="Search products">
+          <select id="shop-sort" aria-label="Sort products">
+            <option value="newest">Newest first</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+          </select>
+          <span class="result-count" id="shop-count" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="grid" id="shop-grid"></div>
+
+      <div class="empty" id="shop-empty" hidden>
+        <span class="ic">🧵</span>
+        <h2 class="bn">কোনো পণ্য পাওয়া যায়নি</h2>
+        <p>No products match your search. Try another keyword or category.</p>
+        <button class="btn btn-primary" id="shop-reset" type="button">Reset filters</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
